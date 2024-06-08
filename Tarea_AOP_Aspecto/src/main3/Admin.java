@@ -10,19 +10,18 @@ package main3;
  */
 public class Admin {
     private String clave;
-    private static Admin administrador;
+    private static Admin singleton;
     
     private Admin(String clave){
         this.clave=clave;
         System.out.println("La clave del administrador es: "+clave);
     }
     public static Admin getSingletonInstance(String clave){
-        if(administrador==null){
-            administrador= new Admin(clave);
-        }else{
+        if(singleton==null)
+        	singleton= new Admin(clave);
+        else
             System.out.println("No se pueden crear mas de 1 objeto de tipo admin");
-        }
-        return administrador;
+        return singleton;
     }
     
     @Override

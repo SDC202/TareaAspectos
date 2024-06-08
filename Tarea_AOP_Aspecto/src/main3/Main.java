@@ -8,7 +8,7 @@ package main3;
  *
  * @author jorge
  */
-public class Singleton {
+public class Main {
 
     /**
      * @param args the command line arguments
@@ -23,11 +23,12 @@ public class Singleton {
         try{
             Admin admon3 = admon1.clone();
             System.out.println(admon3.getClave());
-        }catch (NullPointerException ex){
+        }
+        catch (NullPointerException ex){
             ex.printStackTrace();
-    }
+        }
     
-}
+    }
 }
     
 
